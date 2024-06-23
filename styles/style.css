@@ -1,0 +1,8 @@
+.fc-daygrid-day-number, .fc-col-header-cell-cushion{
+    color: black;
+    text-decoration: none;
+}
+
+.fc-daygrid-day-frame:hover {
+    cursor: pointer;
+}
