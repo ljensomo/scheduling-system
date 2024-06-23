@@ -6,6 +6,7 @@
 
     <!-- includes css -->
     <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css" class="rel">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
     <!-- custom css -->
     <link rel="stylesheet" href="styles/style.css">
@@ -46,6 +47,28 @@
             <div class="col-3">
                 <div class="p-3 border bg-light" id="right-div">
                     <button type="button" id="btn-create-event" class="btn btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#calendar-modal">+ Create Event</button>
+                </div>
+                <div class="p-3 border bg-light" id="right-div">
+                    <div class="row">
+                        <div class="col-6">
+                            <h5>Categories</h5>
+                        </div>
+                        <div class="col-6">
+                            <button type="button" class="btn btn-primary btn-sm" data-bs-target="#category-modal" data-bs-toggle="modal">+ Add</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <table class="table table-bordered">
+                        <tbody>
+                            <tr>
+                                <td style="display:flex;"><div id="category-color-div"></div>&nbsp;&nbsp;Personal Tasks</td>
+                                <td class="text-center">
+                                    <button class="btn btn-sm btn-warning"><i class="bi-pencil-square"></i></button>
+                                    <button class="btn btn-sm btn-danger"><i class="bi-trash"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
             <div class="col-9">

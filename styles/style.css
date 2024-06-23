@@ -6,3 +6,9 @@
 .fc-daygrid-day-frame:hover {
     cursor: pointer;
 }
+
+#category-color-div{
+    height: 25px;
+    width: 25px;
+    background-color: black;
+}

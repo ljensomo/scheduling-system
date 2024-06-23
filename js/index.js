@@ -13,6 +13,7 @@ $(document).ready(function(){
         themeSystem: 'bootstrap5',
         initialView: 'dayGridMonth',
         headerToolbar: { center: 'dayGridMonth, timeGridWeek, timeGridDay'},
+        events:events,
 
         // click handler
         selectable: true,
@@ -20,8 +21,14 @@ $(document).ready(function(){
             $("#event-date").val(info.dateStr);
             $("#calendar-modal").modal("toggle");
         },
+        eventClick: function(info){
+            $("#event-form").trigger("reset");
 
-        events:events
+            $("#event-date").val(info.event.startStr);
+            $("#event-description").val(info.event.title);
+
+            $("#calendar-modal").modal("toggle");
+        }
     });
 
     calendar.render();
@@ -45,5 +52,14 @@ $(document).ready(function(){
     // button create click
     $("#btn-create-event").click(function(){
         $("#event-form").trigger("reset");
+    });
+
+    // allday checkbox
+    $("#event-allday").change(function(){
+        if(this.checked){
+            $("#event-time").hide();
+        }else{
+            $("#event-time").show();
+        }
     });
 });
